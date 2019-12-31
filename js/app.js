@@ -1,5 +1,31 @@
 var scores, activePlayer, roundScore, gamePlaying;
 
+init();
+
+document.querySelector('.btn-roll').addEventListener('click', function(){
+
+    var dice = Math.floor(Math.random() * 6) + 1;
+
+    var diceDOM = document.querySelector('.dice');
+    diceDOM.style.display = 'block';
+    diceDOM.src = '../img/dice-' + dice + '.jpg';
+
+    if (dice !== 1) {
+        roundScore += dice;
+        document.querySelector('#current-' + activePlayer).textContent = roundScore;
+    } else {
+        // Next player
+        nextPlayer();
+    }
+});
+
+function nextPlayer(){
+    activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+    roundScore = 0;
+
+    
+}
+
 function init(){
     scores = [0, 0];
     activePlayer = 0;
