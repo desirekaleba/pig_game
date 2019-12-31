@@ -158,3 +158,108 @@ i {
     text-decoration: line-through;
     pointer-events: none;
 }
+
+@media screen and (max-width: 610px){
+    .player-name {
+        font-size: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-top: .4rem;
+        margin-bottom: .4rem;
+        position: relative;
+    }
+    
+    .player-score {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
+    .active .player-name::after{
+        font-size: 2rem;
+        top: -.3rem;
+        right: .4rem;
+    
+    }
+    
+    .player-current-box {
+        padding: .4rem;
+    }
+    
+    .player-current-label {
+        margin-bottom: .3rem;
+        font-size: .5rem;
+    }
+    
+    .player-current-score {
+        font-size: .9rem;
+    }
+    
+    button {
+        width: 8rem;
+        font-size: .8rem;
+    }
+    
+    button:hover i {
+        margin-right: .8rem;
+    }
+    
+    i {
+        margin-right: 10px;
+        font-size: 25px;
+        line-height: 1;
+        margin-top: -4px;
+        transition: margin 0.3s;
+    }
+    
+    .dice {
+        height: 70px;
+        box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.10);
+    }
+}
+
+@media screen and (max-width: 450px){
+    .player-0-panel,
+    .player-1-panel {
+        width: 100%;
+        float: none;
+        height: auto;
+        padding: .8rem;
+    }
+    
+    .player-current-box {
+        width: 50%;
+        padding: .6rem;
+    }
+
+    .player-current-label {
+        margin-bottom: .5rem;
+        font-size: .8rem;
+    }
+
+    .player-current-score {
+        font-size: 1.5rem;
+    }
+    .btn-new {
+        top: 45px;
+        left: 52px;
+        font-size: 16px;
+    }
+    .btn-roll {
+        top: 70%;
+        left: 52px;
+        font-size: 16px;
+    }
+    .btn-hold {
+        top: 70%;
+        left: 80%;
+        font-size: 16px;
+    }
+    .dice {
+        position: absolute;
+        left: 80%;
+        top: 70px;
+        transform: translateX(-50%);
+        height: 50px;
+        box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+    }
+}
