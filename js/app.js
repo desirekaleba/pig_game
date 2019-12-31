@@ -38,9 +38,7 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
     
 });
 
-document.querySelector('.btn-new').addEventListener('click', funtion(){
-    init();
-});
+document.querySelector('.btn-new').addEventListener('click', init);
 
 function nextPlayer(){
     activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
