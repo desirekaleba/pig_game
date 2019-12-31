@@ -35,6 +35,10 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
             document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
             document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
 
+            document.querySelector('.btn-roll').classList.add('finished');
+            document.querySelector('.btn-hold').classList.add('finished');
+
+
             // 
             gamePlaying = false;
 
@@ -83,5 +87,9 @@ function init(){
     document.querySelector('.player-1-panel').classList.remove('active');
 
     document.querySelector('.player-0-panel').classList.add('active');
+
+    document.querySelector('.btn-roll').classList.remove('finished');
+    document.querySelector('.btn-hold').classList.remove('finished');
+
 
 }

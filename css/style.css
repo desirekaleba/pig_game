@@ -152,3 +152,9 @@ i {
     font-weight: 300;
     color: #EB4D4D;
 }
+
+.finished {
+    color: rgb(114, 7, 7);
+    text-decoration: line-through;
+    pointer-events: none;
+}
