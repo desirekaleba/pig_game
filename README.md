@@ -1,4 +1,4 @@
-#JS pig game
+# JS pig game
 
 Is a html, css ans javascript game making fun
 
