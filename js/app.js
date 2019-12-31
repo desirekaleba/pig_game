@@ -24,6 +24,22 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
     scores[activePlayer] += roundScore;
 
     document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+
+    if (scores[activePlayer] >= 100) {
+        document.querySelector('#name-' + activePlayer).textContent = "Winner!";
+        document.querySelector('.dice').style.display = 'none';
+
+        document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
+        document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
+
+    }else {
+        nextPlayer();
+    }
+    
+});
+
+document.querySelector('.btn-new').addEventListener('click', funtion(){
+    init();
 });
 
 function nextPlayer(){
@@ -37,8 +53,6 @@ function nextPlayer(){
     document.querySelector('.player-1-panel').classList.toggle('active');
 
     document.querySelector('.dice').style.display = "none";
-
-
 
     
 }
